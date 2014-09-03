@@ -3,6 +3,8 @@
 	class MY_Controller extends CI_Controller {
 		
 		function __construct() {
+			$this->data = "";
+			
 			// Run the CI_Controller default constructor
 			parent::__construct();
 			
@@ -10,7 +12,7 @@
 			$this->load->database();
 		}
 		
-		public function header( $title ) {
+		public function header() {
 			$this->load->view( "includes/header", $this->data );
 		}
 		

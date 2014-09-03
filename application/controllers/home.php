@@ -3,7 +3,9 @@
 	class Home extends MY_Controller {
 
 		public function index() {
-			$this->load->view('welcome_message');
+			self::header();
+			$this->load->view('home');
+			self::footer();
 		}
 		
 	}
