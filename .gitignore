@@ -1,1 +1,2 @@
-/database.php
+# Don't commit the database file, duh!
+config/database.php
