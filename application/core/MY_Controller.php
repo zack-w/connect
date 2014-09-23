@@ -8,6 +8,9 @@
 			// Run the CI_Controller default constructor
 			parent::__construct();
 			
+			// Load the helpers
+			$this->load->helper('url');
+			
 			// Setup the database
 			$this->load->database();
 		}

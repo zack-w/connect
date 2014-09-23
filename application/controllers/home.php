@@ -8,4 +8,11 @@
 			self::footer();
 		}
 		
+		public function login() {
+			self::header();
+			$this->load->view('home');
+			self::footer();
+		}
+		
 	}
+	

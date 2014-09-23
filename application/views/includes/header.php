@@ -1,10 +1,34 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Connect!</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-		<script src="assets/js/boostrap.min.js"></script>
-		<script src="assets/js/jquery-1.11.0.js"></script>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<link rel="stylesheet" type="text/css" href="<?= $this->config->base_url(); ?>assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="<?= $this->config->base_url(); ?>assets/css/simple-sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="<?= $this->config->base_url(); ?>assets/css/custom.css" />
+		<script src="<?= $this->config->base_url(); ?>assets/js/boostrap.min.js"></script>
+		<script src="<?= $this->config->base_url(); ?>assets/js/jquery-1.11.0.js"></script>
 	</head>
 	
 	<body>
-		
+		<div id="wrapper">
+			<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li class="sidebar-brand"><a href="#">MTH Connect!</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Take Test</a></li>
+					<li><a href="#">Results</a></li>
+				</ul>
+			</div>
+			
+			<div id="page-content-wrapper">
+			
+				<div class="alert alert-info" role="alert">
+					Don't know who to take to homecoming? Try <a href="<?= $this->config->base_url(); ?>">MTH Connect!</a>
+				</div>
+				
