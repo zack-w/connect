@@ -19,9 +19,8 @@
 		<div id="wrapper">
 			<div id="sidebar-wrapper">
 				<ul class="sidebar-nav">
-					<li class="sidebar-brand"><a href="#">MTH Connect!</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Take Test</a></li>
+					<li class="sidebar-brand"><a href="<?= $this->config->base_url(); ?>/index.php">MTH Connect!</a></li>
+					<li><a href="<?= $this->config->base_url(); ?>/index.php/test/">Take Test</a></li>
 					<li><a href="#">Results</a></li>
 				</ul>
 			</div>

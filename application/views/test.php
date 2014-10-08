@@ -2,13 +2,13 @@
 <div style="padding: 20px;">
 	<h4><b>Question #6</b></h4>
 	<h5><?= $question->Text ?></h5>
-
+	
 	<br />
 	
-	<form>
-		<input type="radio" /> <b>Introvert</b> - You are shy, keep to yourself, have no friends, and don't socialize
+	<form action="<?= $this->config->base_url(); ?>/index.php/test/question" method="POST">
+		<input type="radio" name="answer" /> <b>Introvert</b> - You are shy, keep to yourself, have no friends, and don't socialize
 		<br />
-		<input type="radio" /> <b>Extrovert</b> - You are very outgoing, sometimes loud.
+		<input type="radio" name="answer" /> <b>Extrovert</b> - You are very outgoing, sometimes loud.
 	</form>
 
 	<br />

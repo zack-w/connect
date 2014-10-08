@@ -23,4 +23,6 @@
 
 <br />
 
-<button type="button" class="btn btn-primary btn">Take Test!</button>
+<a href="<?= $this->config->base_url(); ?>/index.php/test">
+	<button type="button" class="btn btn-primary btn">Take Test!</button>
+</a>
