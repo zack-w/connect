@@ -13,6 +13,9 @@
 			
 			// Setup the database
 			$this->load->database();
+			
+			// Load the models
+			$this->load->model( 'Question' );
 		}
 		
 		public function header() {
