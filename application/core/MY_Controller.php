@@ -15,6 +15,7 @@
 			$this->load->database();
 			
 			// Load the models
+			$this->load->model( 'User' );
 			$this->load->model( 'Question' );
 		}
 		

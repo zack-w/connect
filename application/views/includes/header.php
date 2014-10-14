@@ -26,8 +26,8 @@
 			</div>
 			
 			<div id="page-content-wrapper">
-			
+				<!--
 				<div class="alert alert-info" role="alert">
 					Don't know who to take to homecoming? Try <a href="<?= $this->config->base_url(); ?>">MTH Connect!</a>
 				</div>
-				
+				-->
