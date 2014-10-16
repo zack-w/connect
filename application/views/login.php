@@ -10,7 +10,7 @@
 ?>
 
 <div style="padding: 20px;">
-	<h4><b>Indentify Yourself</b></h4>
+	<h4><b>Identify Yourself</b></h4>
 	<hr />
 	
 	<form class="col-sm-6 form-horizontal" role="form" method="post">
