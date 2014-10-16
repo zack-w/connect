@@ -11,10 +11,18 @@
 			parent::__construct();
 		}
 		
-		function get( $username ) {
-			$this->db->where( "Username", $qid );
+		function get( $fname, $dob ) {
+			$this->db->like( "LOWER(FirstName)", strtolower( $fname ) );
+			$this->db->like( "Birthday", $dob );
 			$query = $this->db->get( "cnct_users" );
-			return array_pop( $query->result() );
+			
+			if( $query->num_rows == 0 ) {
+				return false;
+			} elseif( $query->num_rows > 1 ){
+				return 2; // "2" many results, haha
+			} else {
+				return array_pop( $query->result() );
+			}
 		}
 		
 		// Sets a user auth key and returns it, destroys old sessions

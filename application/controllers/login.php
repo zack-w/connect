@@ -1,21 +1,35 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	
-	class Test extends MY_Controller {
+	class Login extends MY_Controller {
 
 		public function index() {
 			self::header();
 			
-			// echo $this->User->makeAuthKey();
-			
-			$qid = 1;
-			
-			if( isset( $_GET[ "qid" ] ) && is_numeric( $_GET[ "qid" ] ) ) {
-				$qid = intval( $_GET[ "qid" ] );
+			if( isset( $_POST[ "fname" ] ) && isset( $_POST[ "month" ] ) && isset( $_POST[ "day" ] ) ) {
+				$firstName = $_POST[ "fname" ];
+				$bdayDay = intval( $_POST[ "day" ] );
+				$bdayMonth = intval( $_POST[ "month" ] );
+				
+				// You must enter at least 2 characters
+				if( 2 > strlen( $firstName ) ) {
+					// Load the question & view
+					$this->load->view( 'login', array( "error" => "Invalid first name entered." ) );
+				} else {
+					$tempUser = $this->User->get( $_POST[ "fname" ], $bdayMonth . "/" . $bdayDay . "/" );
+					
+					if( $tempUser == false ) {
+						$this->load->view( 'login', array( "error" => "You could not be found. Please enter your full legal name." ) );
+					} elseif( is_numeric( $tempUser ) && $tempUser == 2 ) {
+						$this->load->view( 'login', array( "error" => "Multiple people found. Please enter your full legal name." ) );
+					} else {
+						// Load the question & view
+						$this->load->view( 'home', array( "user" => $tempUser ) );
+					}
+				}
+			} else {
+				// Load the question & view
+				$this->load->view( 'login' );
 			}
-			
-			// Load the question & view
-			$QuestionData = $this->Question->get( $qid );
-			$this->load->view( 'test', array( "question" => $QuestionData ) );
 			
 			// Load the footer
 			self::footer();

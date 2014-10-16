@@ -1,25 +1,63 @@
 
-<div style="padding: 20px;">
-	<h4><b>Question #6</b></h4>
-	<h5><?= $question->Text ?></h5>
-	
-	<br />
-	
-	<form action="<?= $this->config->base_url(); ?>/index.php/test/question" method="POST">
-		<input type="radio" name="answer" /> <b>Introvert</b> - You are shy, keep to yourself, have no friends, and don't socialize
-		<br />
-		<input type="radio" name="answer" /> <b>Extrovert</b> - You are very outgoing, sometimes loud.
-	</form>
+<?php
+	if( isset( $error ) ) {
+		echo '
+			<div class="alert alert-danger" role="alert">
+				' . $error . '
+			</div>
+		';
+	}
+?>
 
-	<br />
+<div style="padding: 20px;">
+	<h4><b>Indentify Yourself</b></h4>
+	<hr />
 	
-	<input type="submit" class="btn btn-primary btn-sm" value="Next" />
-	
-	<br /><br />
-	
-	<div class="progress">
-		<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-			<span class="sr-only">20% Complete</span>
+	<form class="col-sm-6 form-horizontal" role="form" method="post">
+		<div class="form-group">
+			<label for="inputEmail3" class="col-sm-4 control-label">First Name</label>
+			<div class="col-sm-8" style="display: inline;">
+				<input type="text" name="fname" class="form-control" style="width: 180px;display: inline;" />
+			</div>
 		</div>
-	</div>
+		
+		<div class="form-group">
+			<label for="inputEmail3" class="col-sm-4 control-label">Birthday</label>
+			<div class="col-sm-8" style="display: inline;">
+				<select class="form-control" name="month" style="width: 120px;display: inline;">">
+					<option value="1">January</option>
+					<option value="2">Febuary</option>
+					<option value="3">March</option>
+					<option value="4">April</option>
+					<option value="5">May</option>
+					<option value="6">June</option>
+					<option value="7">July</option>
+					<option value="8">August</option>
+					<option value="9">September</option>
+					<option value="10">October</option>
+					<option value="11">November</option>
+					<option value="12">December</option>
+				</select>
+				
+				<select class="form-control" name="day" style="width: 70px;display: inline;">">
+					<?php
+						for( $i = 1; 32 > $i; $i++ ) {
+							echo '
+								<option value"' . $i . '">' . $i . '</option>
+							';
+						}
+					?>
+				</select>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<div class="col-sm-4"></div>
+			
+			<div class="col-sm-8">
+				<br />
+				<input type="submit" class="btn btn-primary btn-sm" value="Login" />
+			</div>
+		</div>
+	</form>
 </div>

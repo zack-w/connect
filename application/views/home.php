@@ -2,6 +2,16 @@
 
 <br />
 
+<?php
+	if( isset( $user ) ) {
+		echo '
+			<div class="alert alert-info" role="alert">
+				Hello <b>' . $user->FirstName . ' ' . $user->LastName .'</b> [Grade: <b>' . $user->Grade . '</b>]
+			</div>
+		';
+	}
+?>
+
 <div class="panel panel-default" style="width: 80%;">
 	<div class="panel-heading"><b>What?</b></div>
 	<div class="panel-body">
