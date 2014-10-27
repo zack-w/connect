@@ -47,7 +47,8 @@
 		function localAuth() {
 			if( isset( $_COOKIE[ "connect_authkey" ] ) ) {
 				$this->db->where( "SessionKey", $_COOKIE[ "connect_authkey" ] );
-				$this->db->
+				$q = $this->db->get( "cnct_users" );
+				echo $q;
 			}
 		}
 		
