@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/connect/';
+$config['base_url']	= 'http://10.151.37.237/connect';
 
 /*
 |--------------------------------------------------------------------------

@@ -23,7 +23,7 @@
 		
 		<div class="form-group">
 			<label for="inputEmail3" class="col-sm-4 control-label">Birthday</label>
-			<div class="col-sm-8" style="display: inline;">
+			<div class="col-sm-8">
 				<select class="form-control" name="month" style="width: 120px;display: inline;">">
 					<option value="1">January</option>
 					<option value="2">Febuary</option>

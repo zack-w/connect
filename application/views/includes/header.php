@@ -26,6 +26,20 @@
 			</div>
 			
 			<div id="page-content-wrapper">
+				<div class="panel panel-default" style="float: right;">
+					<div class="panel-body" style="font-size: 12px;">
+						<div class="row">
+							<div class="col-md-4">
+								<img style="width: 32px;height: 32px;" src="<?= $this->config->base_url(); ?>assets/images/standard-avatar.jpg" />
+							</div>
+							<div class="col-md-8">
+								Hello, Zachary<br />
+								<a href="">Logout?</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 				<!--
 				<div class="alert alert-info" role="alert">
 					Don't know who to take to homecoming? Try <a href="<?= $this->config->base_url(); ?>">MTH Connect!</a>
