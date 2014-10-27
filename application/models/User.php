@@ -14,6 +14,8 @@
 	
 	class User extends CI_Model {
 		
+		public $ActiveUser = false;
+		
 		function __construct() {
 			parent::__construct();
 		}

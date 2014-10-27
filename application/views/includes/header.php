@@ -26,6 +26,7 @@
 			</div>
 			
 			<div id="page-content-wrapper">
+				<? if( $this->User->ActiveUser != false ) { ?>
 				<div class="panel panel-default" style="float: right;">
 					<div class="panel-body" style="font-size: 12px;">
 						<div class="row">
@@ -39,6 +40,7 @@
 						</div>
 					</div>
 				</div>
+				<? } ?>
 				
 				<!--
 				<div class="alert alert-info" role="alert">
