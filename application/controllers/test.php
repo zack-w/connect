@@ -7,7 +7,7 @@
 			
 			// If they aren't logged in, make them
 			if( $this->User->ActiveUser == false ) {
-				//redirect('/login', 'refresh');
+				redirect('/login', 'refresh');
 			}
 			
 			$qid = 1;
