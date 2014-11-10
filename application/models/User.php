@@ -48,7 +48,6 @@
 		
 		function logout() {
 			if( isset( $this->User->ActiveUser ) ) {
-				die( $this->User->ActiveUser[ "ID" ] . "!" );
 				$this->db->where( "ID", $this->User->ActiveUser->ID );
 				$this->db->update( "cnct_users", array( "SessionKey" => "" ) );
 			}
