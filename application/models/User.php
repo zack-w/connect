@@ -44,6 +44,7 @@
 		
 		function localLogin( $uid ) {
 			setcookie( "connect_authkey", $this->User->makeAuthKey( $uid ), time() + 3600, "/" );
+			$this->User->localAuth();
 		}
 		
 		function logout() {

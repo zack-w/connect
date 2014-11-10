@@ -20,8 +20,9 @@
 			<div id="sidebar-wrapper">
 				<ul class="sidebar-nav">
 					<li class="sidebar-brand"><a href="<?= $this->config->base_url(); ?>index.php">MTH Connect!</a></li>
+					<li><a href="<?= $this->config->base_url(); ?>index.php">Home</a></li>
 					<li><a href="<?= $this->config->base_url(); ?>index.php/test/">Take Test</a></li>
-					<li><a href="#">Results</a></li>
+					<!--<li><a href="#">Results</a></li>-->
 					<li><a href="<?= $this->config->base_url(); ?>index.php/login/">Login</a></li>
 				</ul>
 			</div>
