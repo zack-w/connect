@@ -1,11 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	
 	class Test extends MY_Controller {
-
+		
 		public function index() {
 			self::header();
 			
-			// echo $this->User->makeAuthKey();
+			// If they aren't logged in, make them
+			if( $this->User->ActiveUser == false ) {
+				//redirect('/login', 'refresh');
+			}
 			
 			$qid = 1;
 			
@@ -15,7 +18,7 @@
 			
 			// Load the question & view
 			$QuestionData = $this->Question->get( $qid );
-			$this->load->view( 'test', array( "question" => $QuestionData ) );
+			get_instance()->load->view( 'test', array( "question" => $QuestionData ) );
 			
 			// Load the footer
 			self::footer();

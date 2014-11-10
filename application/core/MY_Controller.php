@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
+	
 	class MY_Controller extends CI_Controller {
 		
 		function __construct() {
@@ -17,6 +17,9 @@
 			// Load the models
 			$this->load->model( 'User' );
 			$this->load->model( 'Question' );
+			
+			// Local authentication & stuff
+			$this->User->localAuth();
 		}
 		
 		public function header() {

@@ -23,6 +23,7 @@
 						$this->load->view( 'login', array( "error" => "Multiple people found. Please enter your full legal name." ) );
 					} else {
 						// Load the question & view
+						$this->User->localLogin( $tempUser->ID );
 						$this->load->view( 'home', array( "user" => $tempUser ) );
 					}
 				}
@@ -33,6 +34,11 @@
 			
 			// Load the footer
 			self::footer();
+		}
+		
+		public function logout() {
+			$this->User->logout();
+			$this->index();
 		}
 		
 	}

@@ -19,9 +19,10 @@
 		<div id="wrapper">
 			<div id="sidebar-wrapper">
 				<ul class="sidebar-nav">
-					<li class="sidebar-brand"><a href="<?= $this->config->base_url(); ?>/index.php">MTH Connect!</a></li>
-					<li><a href="<?= $this->config->base_url(); ?>/index.php/test/">Take Test</a></li>
+					<li class="sidebar-brand"><a href="<?= $this->config->base_url(); ?>index.php">MTH Connect!</a></li>
+					<li><a href="<?= $this->config->base_url(); ?>index.php/test/">Take Test</a></li>
 					<li><a href="#">Results</a></li>
+					<li><a href="<?= $this->config->base_url(); ?>index.php/login/">Login</a></li>
 				</ul>
 			</div>
 			
@@ -34,8 +35,8 @@
 								<img style="width: 32px;height: 32px;" src="<?= $this->config->base_url(); ?>assets/images/standard-avatar.jpg" />
 							</div>
 							<div class="col-md-8">
-								Hello, Zachary<br />
-								<a href="">Logout?</a>
+								Hello, <?= $this->User->ActiveUser->FirstName ?><br />
+								<a href="<?= $this->config->base_url(); ?>/index.php/login/logout">Logout?</a>
 							</div>
 						</div>
 					</div>

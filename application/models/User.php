@@ -43,14 +43,26 @@
 		}
 		
 		function localLogin( $uid ) {
-			setcookie( "connect_authkey", makeAuthKey( $uid ), time() + 3600 );
+			setcookie( "connect_authkey", $this->User->makeAuthKey( $uid ), time() + 3600, "/" );
+		}
+		
+		function logout() {
+			if( isset( $this->User->ActiveUser ) ) {
+				die( $this->User->ActiveUser[ "ID" ] . "!" );
+				$this->db->where( "ID", $this->User->ActiveUser->ID );
+				$this->db->update( "cnct_users", array( "SessionKey" => "" ) );
+			}
+			
+			setcookie( "connect_authkey", "", 0, "/" );
+			redirect('/login', 'refresh');
 		}
 		
 		function localAuth() {
-			if( isset( $_COOKIE[ "connect_authkey" ] ) ) {
+			if( isset( $_COOKIE[ "connect_authkey" ] ) && strlen( $_COOKIE[ "connect_authkey" ] ) >= 30 ) {
 				$this->db->where( "SessionKey", $_COOKIE[ "connect_authkey" ] );
-				$q = $this->db->get( "cnct_users" );
-				echo $q;
+				$queryRes = $this->db->get( "cnct_users" );
+				$userArr = $queryRes->result();
+				$this->ActiveUser = array_pop( $userArr );
 			}
 		}
 		
