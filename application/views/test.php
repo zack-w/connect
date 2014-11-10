@@ -1,6 +1,6 @@
 
 <div style="padding: 20px;">
-	<h4><b>Question #6</b></h4>
+	<h4><b>Question #<?= $question->ID; ?></b></h4>
 	<h5><?= $question->Text ?></h5>
 	
 	<br />

@@ -4,6 +4,9 @@
 	
 	class Question extends CI_Model {
 		
+		// This is a constant for consistancy
+		public $numQuestions = 10;
+		
 		function __construct() {
 			parent::__construct();
 		}

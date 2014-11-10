@@ -2,6 +2,8 @@
 	
 	class Test extends MY_Controller {
 		
+		
+		
 		public function index() {
 			self::header();
 			
@@ -18,7 +20,12 @@
 			
 			// Load the question & view
 			$QuestionData = $this->Question->get( $qid );
-			get_instance()->load->view( 'test', array( "question" => $QuestionData ) );
+			$Options = $this->Option->getQuestionOptions( $qid );
+			get_instance()->load->view( 'test', array(
+				"question" => $QuestionData,
+				"options" => $Options,
+				"numq" => $this->Question->numQuestions
+			) );
 			
 			// Load the footer
 			self::footer();

@@ -11,7 +11,7 @@
 		function getQuestionOptions( $qid ) {
 			$this->db->where( "QuestionID", $qid );
 			$query = $this->db->get( "cnct_options" );
-			return $query;
+			return $query->result_array();
 		}
 		
 	}

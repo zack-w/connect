@@ -17,6 +17,7 @@
 			// Load the models
 			$this->load->model( 'User' );
 			$this->load->model( 'Question' );
+			$this->load->model( 'Option' );
 			
 			// Local authentication & stuff
 			$this->User->localAuth();
