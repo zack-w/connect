@@ -3,6 +3,8 @@
 	class Login extends MY_Controller {
 
 		public function index() {
+			if( $this->User->ActiveUser == true ) {
+				redirect('/test', 'refresh');
 			if( isset( $_POST[ "fname" ] ) && isset( $_POST[ "month" ] ) && isset( $_POST[ "day" ] ) ) {
 				$firstName = $_POST[ "fname" ];
 				$bdayDay = intval( $_POST[ "day" ] );
@@ -39,6 +41,8 @@
 			
 			// Load the footer
 			self::footer();
+			
+			}
 		}
 		
 		public function logout() {
