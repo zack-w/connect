@@ -16,7 +16,6 @@
 			$query = $this->db->get( "cnct_questions" );
 			return array_pop( $query->result() );
 		}
-		
 	}
 
 ?>

@@ -21,6 +21,7 @@
 			// Load the question & view
 			$QuestionData = $this->Question->get( $qid );
 			$Options = $this->Option->getQuestionOptions( $qid );
+			
 			get_instance()->load->view( 'test', array(
 				"question" => $QuestionData,
 				"options" => $Options,
