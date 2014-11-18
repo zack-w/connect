@@ -10,12 +10,12 @@
 			if( $question->Type == 1 ) {
 				// Ratio Button
 				foreach( $options as $option ) {
-					echo '<input type="radio" name="answer" /> <b>' . $option[ "Text" ] . '</b><br />';
+					echo '<input type="radio" name="answer" /> ' . $option[ "Text" ] . '<br />';
 				}
 			} elseif( $question->Type == 2 ) {
 				// Ratio Button
 				foreach( $options as $option ) {
-					echo '<input type="checkbox" name="' . $option[ "ID" ] . '" /> <b>' . $option[ "Text" ] . '</b><br />';
+					echo '<input type="checkbox" name="' . $option[ "ID" ] . '" /> ' . $option[ "Text" ] . '<br />';
 				}
 			}
 		?>

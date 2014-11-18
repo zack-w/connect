@@ -12,21 +12,22 @@
 				redirect('/login', 'refresh');
 			}
 			
-			$qid = 1;
-			
-			if( isset( $_GET[ "qid" ] ) && is_numeric( $_GET[ "qid" ] ) ) {
-				$qid = intval( $_GET[ "qid" ] );
-			}
+			$qid = ( $this->User->ActiveUser->Progress + 1 );
 			
 			// Load the question & view
 			$QuestionData = $this->Question->get( $qid );
-			$Options = $this->Option->getQuestionOptions( $qid );
 			
-			get_instance()->load->view( 'test', array(
-				"question" => $QuestionData,
-				"options" => $Options,
-				"numq" => $this->Question->numQuestions
-			) );
+			if( $QuestionData == false ) {
+				get_instance()->load->view( 'test_complete' );
+			} else {
+				$Options = $this->Option->getQuestionOptions( $qid );
+				
+				get_instance()->load->view( 'test', array(
+					"question" => $QuestionData,
+					"options" => $Options,
+					"numq" => $this->Question->numQuestions
+				) );
+			}
 			
 			// Load the footer
 			self::footer();
