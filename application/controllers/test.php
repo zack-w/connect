@@ -13,7 +13,6 @@
 			}
 			
 			$qid = ( $this->User->ActiveUser->Progress + 1 );
-			
 			// Load the question & view
 			$QuestionData = $this->Question->get( $qid );
 			
