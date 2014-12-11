@@ -5,25 +5,24 @@
 	
 	<br />
 	
-	<form action="<?= $this->config->base_url(); ?>/index.php/test/question" method="POST">
+	<form action="<?= $this->config->base_url(); ?>/index.php/test" method="POST">
+		<input type="hidden" name="didanswer" value="yes" />
 		<?php
 			if( $question->Type == 1 ) {
 				// Ratio Button
 				foreach( $options as $option ) {
-					echo '<input type="radio" name="answer" /> ' . $option[ "Text" ] . '<br />';
+					echo '<input type="radio" name="answer" value="' . $option[ "ID" ] . ' " /> ' . $option[ "Text" ] . '<br />';
 				}
 			} elseif( $question->Type == 2 ) {
-				// Ratio Button
+				// 
 				foreach( $options as $option ) {
-					echo '<input type="checkbox" name="' . $option[ "ID" ] . '" /> ' . $option[ "Text" ] . '<br />';
+					echo '<input type="checkbox" name="answer_' . $option[ "ID" ] . '" /> ' . $option[ "Text" ] . '<br />';
 				}
 			}
 		?>
+		<br />
+		<input type="submit" class="btn btn-primary btn-sm" value="Next" />
 	</form>
-	
-	<br />
-	
-	<input type="submit" class="btn btn-primary btn-sm" value="Next" />
 	
 	<br /><br />
 	
