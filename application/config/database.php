@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'gmdonate.site.nfoservers.com';
-$db['default']['username'] = 'gmdonate2';
-$db['default']['password'] = 'CYM4RMQypx';
-$db['default']['database'] = 'gmdonate2_connect_dev';
+$db['default']['hostname'] = '';
+$db['default']['username'] = '';
+$db['default']['password'] = '';
+$db['default']['database'] = '';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = 'cnct_';
 $db['default']['pconnect'] = TRUE;
