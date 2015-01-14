@@ -19,7 +19,11 @@
 		<div id="wrapper">
 			<div id="sidebar-wrapper">
 				<ul class="sidebar-nav">
-					<li class="sidebar-brand"><a href="<?= $this->config->base_url(); ?>index.php">MTH Connect!</a></li>
+					<li class="sidebar-brand">
+						<a href="<?= $this->config->base_url(); ?>index.php">
+							<img src="<?= $this->config->base_url(); ?>assets/images/mthconnect.png" style="width: 80%;" />
+						</a>
+					</li>
 					<li><a href="<?= $this->config->base_url(); ?>index.php">Home</a></li>
 					<li><a href="<?= $this->config->base_url(); ?>index.php/test/">Take Test</a></li>
 					<!--<li><a href="#">Results</a></li>-->

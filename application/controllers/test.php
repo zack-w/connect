@@ -2,8 +2,6 @@
 	
 	class Test extends MY_Controller {
 		
-		
-		
 		public function index() {
 			self::header();
 			
