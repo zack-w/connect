@@ -26,7 +26,7 @@
 	<div class="panel-heading"><b>How?</b></div>
 	<div class="panel-body">
 		It's simple, click the "<i>Take Test!</i>" button below, login, and then complete the test.
-		The results will be available on <b>October, 1st</b>. You can get them at lunch. The
+		The results will be available on <b>February 14th</b>. You can get them at lunch. The
 		results will cost $1.00 for the personality results, and $1.00 for the matchmaker results.
 	</div>
 </div>

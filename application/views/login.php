@@ -26,7 +26,7 @@
 			<div class="col-sm-8">
 				<select class="form-control" name="month" style="width: 120px;display: inline;">">
 					<option value="1">January</option>
-					<option value="2">Febuary</option>
+					<option value="2">February</option>
 					<option value="3">March</option>
 					<option value="4">April</option>
 					<option value="5">May</option>

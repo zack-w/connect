@@ -24,7 +24,7 @@
 					
 					if( $tempUser == false ) {
 						self::header();
-						$this->load->view( 'login', array( "error" => "You could not be found. Please enter your full legal name." ) );
+						$this->load->view( 'login', array( "error" => "You could not be found. Please enter your full legal first name and correct birthday." ) );
 					} elseif( is_numeric( $tempUser ) && $tempUser == 2 ) {
 						self::header();
 						$this->load->view( 'login', array( "error" => "Multiple people found. Please enter your full legal name." ) );
